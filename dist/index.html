@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HarvestLink - Professional Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container" id="authContainer">
+    <div class="form-box login">
+      <form id="loginForm">
+        <h1>Login</h1>
+        <div class="input-box">
+          <input type="text" placeholder="Username" name="username" required>
+          <i class='bx bxs-user'></i>
+        </div>
+        <div class="input-box">
+          <input type="password" placeholder="Password" name="password" required>
+          <i class='bx bxs-lock-alt'></i>
+        </div>
+        <div class="forgot-link">
+          <a href="#">Forgot Password?</a>
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <p>or login with social platforms</p>
+        <div class="social-icons">
+          <a href="#"><i class='bx bxl-google'></i></a>
+          <a href="#"><i class='bx bxl-facebook'></i></a>
+          <a href="#"><i class='bx bxl-github'></i></a>
+          <a href="#"><i class='bx bxl-linkedin'></i></a>
+        </div>
+      </form>
+    </div>
+    <div class="form-box register">
+      <form id="registerForm">
+        <h1>Registration</h1>
+        <div class="input-box">
+          <input type="text" placeholder="Username" name="username" required>
+          <i class='bx bxs-user'></i>
+        </div>
+        <div class="input-box">
+          <input type="email" placeholder="Email" name="email" required>
+          <i class='bx bxs-envelope'></i>
+        </div>
+        <div class="input-box">
+          <input type="password" placeholder="Password" name="password" required>
+          <i class='bx bxs-lock-alt'></i>
+        </div>
+        <button type="submit" class="btn">Register</button>
+        <p>or register with social platforms</p>
+        <div class="social-icons">
+          <a href="#"><i class='bx bxl-google'></i></a>
+          <a href="#"><i class='bx bxl-facebook'></i></a>
+          <a href="#"><i class='bx bxl-github'></i></a>
+          <a href="#"><i class='bx bxl-linkedin'></i></a>
+        </div>
+      </form>
+    </div>
+    <div class="toggle-box">
+      <div class="toggle-panel toggle-left">
+        <h1>Hello, Welcome to HarvestLink</h1>
+        <p>Don't have an account?</p>
+        <button class="btn register-btn">Register</button>
+      </div>
+      <div class="toggle-panel toggle-right">
+        <h1>Welcome Back!</h1>
+        <p>Already have an account?</p>
+        <button class="btn login-btn">Login</button>
+      </div>
+    </div>
+  </div>
+  
+  <div id="dashboard" style="display: none;">
+    <header>
+      <div class="logo-container">
+        <img src="/images/harvestlink_logo.png" alt="Logo" class="logo">
+        <h2 class="brand-name">HarvestLink</h2>
+      </div>
+      <nav class="top-nav">
+        <ul>
+          <li><a href="#" id="homeLink" onclick="showSection('home')">Home</a></li>
+          <li><a href="#" id="taskListLink" onclick="showSection('task')">Task List</a></li>
+          <li><a href="#" id="inventoryListLink" onclick="showSection('inventory')">Inventory List</a></li>
+          <li><a href="#" id="cropListLink" onclick="showSection('crop')">Crop List</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="content" id="homeSection" style="display: block;">
+        <div class="hero-bg">
+          <div class="hero-overlay">
+            <h1>Welcome to HarvestLink!</h1>
+            <p>Grow faster, manage smarter, and harvest success with HarvestLink – your all-in-one platform for seamless farm management. From tracking tasks and inventory to optimizing crop yields, we empower farmers with the tools they need to thrive. Stay ahead with smart insights, effortless organization, and a future-ready approach to agriculture. Join HarvestLink and cultivate success like never before!</p>
+            <button class="btn-primary" id="getStartedBtn">Get Started</button>
+          </div>
+        </div>
+        <div class="features-extended">
+          <div class="feature-item">
+            <i class='bx bxs-check-shield feature-icon'></i>
+            <h3>Secure &amp; Reliable</h3>
+            <p>Your data is safe and always accessible.</p>
+          </div>
+          <div class="feature-item">
+            <i class='bx bxs-calendar-check feature-icon'></i>
+            <h3>Smart Scheduling</h3>
+            <p>Automatically organize tasks based on seasons.</p>
+          </div>
+          <div class="feature-item">
+            <i class='bx bxs-bar-chart-alt-2 feature-icon'></i>
+            <h3>Real-Time Analytics</h3>
+            <p>Instant insights into your operations.</p>
+          </div>
+        </div>
+        <div class="testimonials">
+          <h2>What Our Users Say</h2>
+          <div class="testimonial-item">
+            <img src="/images/josesantos.jpg" alt="User 1" class="testimonial-img">
+            <blockquote>"HarvestLink streamlined our planting process. A game-changer!"</blockquote>
+            <cite>- Jose Santos, Green Acres Farm</cite>
+          </div>
+          <div class="testimonial-item">
+            <img src="/images/manuelgarcia.jpg" alt="User 2" class="testimonial-img">
+            <blockquote>"Our inventory is now under control—no more stock-outs!"</blockquote>
+            <cite>- Manuel Garcia, AgroPlus</cite>
+          </div>
+        </div>
+        <div class="social-proof">
+          <p>Trusted by farmers and agri-businesses worldwide.</p>
+        </div>
+        <footer>
+          <div class="footer-columns">
+            <div class="footer-col">
+              <h3>Sitemap</h3>
+              <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('task')">Task List</a></li>
+                <li><a href="#" onclick="showSection('inventory')">Inventory List</a></li>
+                <li><a href="#" onclick="showSection('crop')">Crop List</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h3>Company</h3>
+              <ul>
+                <li>Licensing</li>
+                <li>Terms &amp; Conditions</li>
+                <li>Privacy Policy</li>
+                <li>Cookie Policy</li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h3>Contact</h3>
+              <ul>
+                <li>FAQ</li>
+                <li>Support</li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h3>Newsletter</h3>
+              <p>Stay updated with our latest news.</p>
+              <form>
+                <input type="text" placeholder="First name">
+                <input type="email" placeholder="email@harvestlink.com">
+                <button type="submit" class="btn-newsletter">Sign up</button>
+              </form>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>© HarvestLink. All rights reserved.</p>
+            <p>
+              <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> •
+              <a href="https://www.instagram.com" target="_blank">Instagram</a> •
+              <a href="https://x.com/" target="_blank">X/Twitter</a>
+            </p>
+          </div>
+        </footer>
+      </section>
+      
+      <section class="content" id="taskListSection" style="display: none;">
+        <h1>Task List</h1>
+        <div class="top-bar">
+          <div class="search-bar">
+            <input type="text" placeholder="Search Task..." id="taskSearch">
+          </div>
+          <button class="add-btn" id="addTaskBtn">Add Task +</button>
+        </div>
+        <div class="card-container" id="taskCardContainer"></div>
+        <div class="dashboard-form modal-form" id="taskFormContainer" style="display: none;">
+          <h2>Add New Task</h2>
+          <p class="instructions">Fill in the details below to add a new task.</p>
+          <form id="taskForm">
+            <div class="form-group">
+              <label>Task Type</label>
+              <input type="text" name="taskType" placeholder="e.g. Land Preparation" required>
+            </div>
+            <div class="form-group">
+              <label>Assigned Date</label>
+              <input type="date" name="assignedDate">
+            </div>
+            <div class="form-group">
+              <label>Assigned By</label>
+              <input type="text" name="assignedBy" value="admin">
+            </div>
+            <div class="form-group">
+              <label>Assigned To</label>
+              <input type="text" name="assignedTo" placeholder="e.g. staff1" required>
+            </div>
+            <div class="form-group">
+              <label>Due On</label>
+              <input type="date" name="dueOn">
+            </div>
+            <div class="form-group">
+              <label>Completion Date</label>
+              <input type="date" name="completionDate">
+            </div>
+            <div class="button-group">
+              <button type="button" class="btn-secondary" id="cancelTaskBtn">Cancel</button>
+              <button type="submit" class="btn-primary">Save</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      
+      <section class="content" id="inventoryListSection" style="display: none;">
+        <h1>Inventory List</h1>
+        <div class="top-bar">
+          <div class="search-bar">
+            <input type="text" placeholder="Search Inventory..." id="inventorySearch">
+          </div>
+          <button class="add-btn" id="addInventoryBtn">Add Inventory +</button>
+        </div>
+        <div class="card-container" id="inventoryCardContainer"></div>
+        <div class="dashboard-form modal-form" id="inventoryFormContainer" style="display: none;">
+          <h2>Add New Inventory</h2>
+          <p class="instructions">Provide the necessary inventory details below.</p>
+          <form id="inventoryForm">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" name="name" placeholder="e.g. Seed A" required>
+            </div>
+            <div class="form-group">
+              <label>Category</label>
+              <input type="text" name="category" placeholder="e.g. Seed / Fertilizer" required>
+            </div>
+            <div class="form-group">
+              <label>Quantity</label>
+              <input type="number" name="quantity" min="0" value="0">
+            </div>
+            <div class="form-group">
+              <label>Reorder Level</label>
+              <input type="number" name="reorderLevel" min="0" value="0">
+            </div>
+            <div class="button-group">
+              <button type="button" class="btn-secondary" id="cancelInventoryBtn">Cancel</button>
+              <button type="submit" class="btn-primary">Save</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      
+      <section class="content" id="cropListSection" style="display: none;">
+        <h1>Crop List</h1>
+        <div class="top-bar">
+          <div class="search-bar">
+            <input type="text" placeholder="Search Crop..." id="cropSearch">
+          </div>
+          <button class="add-btn" id="addCropBtn">Add Crop +</button>
+        </div>
+        <div class="card-container" id="cropCardContainer"></div>
+        <div class="dashboard-form modal-form" id="cropFormContainer" style="display: none;">
+          <h2>Add New Crop</h2>
+          <p class="instructions">Enter crop details to add a new crop record.</p>
+          <form id="cropForm">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" name="name" placeholder="e.g. Wheat" required>
+            </div>
+            <div class="form-group">
+              <label>Planting Date</label>
+              <input type="date" name="plantingDate">
+            </div>
+            <div class="form-group">
+              <label>Expected Yield</label>
+              <input type="text" name="expectedYield" placeholder="e.g. 100 kg">
+            </div>
+            <div class="form-group">
+              <label>Pest Disease</label>
+              <input type="text" name="pestDisease" placeholder="e.g. None">
+            </div>
+            <div class="button-group">
+              <button type="button" class="btn-secondary" id="cancelCropBtn">Cancel</button>
+              <button type="submit" class="btn-primary">Save</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
